@@ -13,5 +13,5 @@ class App extends React.Component {
 }
 
 Meteor.startup(() => {
-  ReactDOM.render(App, document.getElementById('app'));
+  ReactDOM.render(<App />, document.getElementById('app'));
 });
