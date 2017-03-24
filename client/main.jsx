@@ -7,7 +7,16 @@ class App extends React.Component {
     return (
       <div>
         <p>Hello React</p>
+        <Test>what a nice test</Test>
       </div>
+    )
+  }
+}
+
+class Test extends React.Component {
+  render() {
+    return (
+      <div>this.props.children</div>
     )
   }
 }
