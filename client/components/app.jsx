@@ -31,10 +31,18 @@ export default class App extends React.Component {
   }
 
   render() {
+    const styles = {
+      container: {
+        paddingLeft: '10px',
+      },
+      fancy: {
+        fontStyle: 'italic',
+      },
+    }
     return (
-      <div>
+      <div style={styles.container}>
         <h1>Hello React</h1>
-        <p>JSX ist sehr ähnlich zu HTML</p>
+        <p style={styles.fancy}>JSX ist sehr ähnlich zu HTML</p>
         <input type="text" value={this.state.inputText} onChange={this.handleChange} />
         <button onClick={this.handleSend}>Send</button>
         {this.showChat()}
