@@ -1,5 +1,5 @@
 import { Meteor } from 'meteor/meteor'
-import { Chat } from './both/collections.js'
+import { Chat } from '/both/collections.js'
 import { createContainer } from 'meteor/react-meteor-data'
 
 import App from './app.jsx'
