@@ -14,14 +14,16 @@ export default class App extends React.Component {
   }
 
   handleSend = () => {
+    Meteor.call('addChatMessage', this.state.inputText, () => {})
     this.setState({
-      chatMessages: this.state.chatMessages.concat(this.state.inputText),
+      // chatMessages: this.state.chatMessages.concat(this.state.inputText),
       inputText: ""
     })
   }
 
   showChat = () => {
-    const messages = this.state.chatMessages.map((message, index) => {
+    // const messages = this.state.chatMessages.map((message, index) => {
+    const messages = this.props.chatMessages.map((message, index) => {
       return <p key={index}>{message}</p>
     })
     return <div>{messages}</div>
