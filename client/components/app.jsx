@@ -23,7 +23,8 @@ export default class App extends React.Component {
 
   showChat = () => {
     // const messages = this.state.chatMessages.map((message, index) => {
-    const messages = this.props.chatMessages.map((message, index) => {
+    const messages = this.props.chatMessages.map((chatDocument, index) => {
+      const message = chatDocument.message
       return <p key={index}>{message}</p>
     })
     return <div>{messages}</div>
