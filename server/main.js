@@ -3,7 +3,6 @@ import { Chat } from '/both/collections.js'
 
 Meteor.methods({
   addChatMessage: (message) => {
-    check(message, String)
     Chat.insert({
       message: message
     })
