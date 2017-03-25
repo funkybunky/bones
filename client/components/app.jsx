@@ -6,6 +6,8 @@ export default class App extends React.Component {
       <div>
         <h1>Hello React</h1>
         <p>JSX ist sehr ähnlich zu HTML</p>
+        <input type='text' />
+        <button>Send</button>
       </div>
     )
   }
