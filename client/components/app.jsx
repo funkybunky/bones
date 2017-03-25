@@ -4,7 +4,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <p>Hello React</p>
+        <h1>Hello React</h1>
+        <p>JSX ist sehr ähnlich zu HTML</p>
       </div>
     )
   }
