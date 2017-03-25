@@ -10,3 +10,7 @@ Meteor.methods({
     })
   }
 })
+
+Meteor.publish('chat.all', () => {
+  return Chat.find()
+})
