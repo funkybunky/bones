@@ -2,17 +2,9 @@ import React from 'react';
 
 export default class App extends React.Component {
 
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     inputText: ""
-  //   };
-  //   this.handleChange = this.handleChange.bind(this);
-  //   this.handleSend = this.handleSend.bind(this);
-  // }
-
   state = {
-    inputText: ""
+    inputText: "",
+    chatMessages: [],
   }
 
   handleChange = (event) => {
@@ -21,8 +13,18 @@ export default class App extends React.Component {
     })
   }
 
-  handleSend = (event) => {
+  handleSend = () => {
+    this.setState({
+      chatMessages: this.state.chatMessages.concat(this.state.inputText)
+    })
+    this.state.inputText = ""
+  }
 
+  showChat = () => {
+    const messages = this.state.chatMessages.map((message, index) => {
+      return <p key={index}>{message}</p>
+    })
+    return <div>{messages}</div>
   }
 
   render() {
@@ -32,6 +34,7 @@ export default class App extends React.Component {
         <p>JSX ist sehr ähnlich zu HTML</p>
         <input type="text" value={this.state.inputText} onChange={this.handleChange} />
         <button onClick={this.handleSend}>Send</button>
+        {this.showChat()}
       </div>
     )
   }
