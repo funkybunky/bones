@@ -15,9 +15,7 @@ export default class App extends React.Component {
 
   handleSend = () => {
     this.setState({
-      chatMessages: this.state.chatMessages.concat(this.state.inputText)
-    })
-    this.setState({
+      chatMessages: this.state.chatMessages.concat(this.state.inputText),
       inputText: ""
     })
   }
