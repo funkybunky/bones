@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 export default class App extends React.Component {
 
@@ -17,7 +17,9 @@ export default class App extends React.Component {
     this.setState({
       chatMessages: this.state.chatMessages.concat(this.state.inputText)
     })
-    this.state.inputText = ""
+    this.setState({
+      inputText: ""
+    })
   }
 
   showChat = () => {
