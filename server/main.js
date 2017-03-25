@@ -1,6 +1,5 @@
 import { Meteor } from 'meteor/meteor'
-
-const Chat = new Mongo.Collection('chat')
+import { Chat } from '/both/collections.js'
 
 Meteor.methods({
   addChatMessage: (message) => {
